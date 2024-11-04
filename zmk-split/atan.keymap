@@ -52,9 +52,9 @@
             bindings = <
                          
                 &lt SYS  B  &kp W       &kp D   &kp  L      &kp Q              &kp  Z   &kp U   &kp O      &kp Y  &kp   P      
-                &kp  C   &kp  S    &kp  T    &kp   H   &kp K                     &kp J    &kp A  &kp E    &kp I   &kp  N
-                &hm LCTRL   V   &hm LALT  F    &hm LSHFT   G   &kp  M   &kp  X          &kp SEMI   &kp  R   &kp COMMA  &kp DOT    &kp   RET      
-                                       &lt NAV  SPACE  &hm LGUI  RET         &hm LSHFT SPACE   &lt NUM BKSP  
+                &kp  C   &kp  S    &kp  T    &kp   H   &kp K                     &kp J    &kp A  &kp E    &kp I   &lt SHCT  N
+                &hm LCTRL   V   &hm LALT  F    &hm LSHFT   G   &kp  M   &kp  X          &kp SQT   &kp  SEMI   &kp COMMA  &kp DOT    &kp   RET      
+                                       &lt NAV  R  &hm LGUI  RET         &hm LSHFT SPACE   &lt NUM BKSP  
             >;
         };
 
@@ -89,11 +89,11 @@
         shortcut_layer {
             bindings = <
              
-                 &kp ESC    &kp LC(D)   &kp LC(R)   &kp LG(R)   &kp LG(LA(R))                &trans &trans   &trans  &trans   &trans
-                &kp LG(A)  &kp LG(S)       &kp LG(D)         &kp LG(F)   &kp LG(LS(N5))             &trans &trans   &trans  &trans   &trans 
+                 &kp ESC    &kp LC(D)   &kp LC(R)   &kp LG(R)   &kp LG(LA(R))                  &trans &trans   &kp UP  &trans   &trans
+                &kp LG(A)  &kp LG(S)       &kp LG(D)         &kp LG(F)   &kp LG(LS(N5))        &trans &kp LEFT   &kp DOWN   &kp RIGHT   &trans 
                 &kp LG(Z) &kp  LG(X)        &kp LG(C)          &kp LG(V)   &kp LG(SPACE)       &trans &trans   &trans  &trans   &trans 
                  
-                        &trans   &trans                     &trans   &trans  
+                        &trans   &trans                     &trans   &kp RCTRL 
             >;
         };
 
