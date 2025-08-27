@@ -2,11 +2,13 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define AL1 0
-#define NUM 1
-#define NAV 2
-#define SYS 3
-#define SHCT 4
+#define QWERT 0
+#define ASRT 1
+#define CSTH 2
+#define NUM 3
+#define NAV 4
+#define SYS 5
+#define SHCT 6
 
 
 / {
@@ -48,52 +50,142 @@
     keymap {
         compatible = "zmk,keymap";
 
+        // default_layer {
+        //     bindings = <
+
+        //         &lt SYS  F    &kp   W    &kp D   &kp  L      &kp Q                  &kp  J    &kp U   &kp O    &kp Y &kp  B
+        //         &kp  C    &kp  S    &kp  T    &kp   H   &kp   K                      &kp  SQT     &kp  N  &kp E       &kp I     &kp  A
+        //         &hm LCTRL V    &hm LALT X     &hm LSHFT G  &kp M  &kp Z             &kp SEMI &kp  P    &kp  COMMA  &kp DOT     &kp   RET
+        //                          &lt NAV  R     &hm LGUI    RET          &hm LSHFT SPACE   &lt NUM BKSP
+        //     >;
+        // };
+
+        // default_layer {
+        //     bindings = <
+
+        //         &lt SYS  W    &kp  L    &kp D  &kp  F    &kp Q                  &kp  J    &kp U   &kp O    &kp Y &kp  P
+        //         &kp  R    &kp  S    &kp  T    &kp   H   &kp   B                     &kp COMMA    &kp A   &kp E       &kp I     &kp    N
+        //         &hm LCTRL X     &hm LALT  V    &hm LSHFT C  &kp  M   &kp Z             &kp SEMI &kp G    &kp   K  &kp DOT     &kp   RET
+        //                          &lt NAV  SPACE     &hm LGUI    RET          &hm LSHFT SPACE   &lt NUM BKSP
+        //     >;
+        // };
+
+        // default_layer {
+        //     bindings = <
+
+        //         &lt SYS F     &kp D  &kp C   &kp  L     &kp Q                  &kp  J    &kp U   &kp O    &kp Y &kp  P
+        //         &kp   N   &kp  S    &kp  T    &kp  R    &kp  X                     &kp K    &kp A   &kp E       &kp I     &kp  H
+        //         &hm LCTRL  B     &hm LALT  V    &hm LSHFT M  &kp   W   &kp Z             &kp SEMI &kp G    &kp  COMMA   &kp DOT     &kp   RET
+        //                          &lt NAV  SPACE     &hm LGUI    RET          &hm LSHFT SPACE   &lt NUM BKSP
+        //     >;
+        // };
+
+        // default_layer {
+        //     bindings = <
+
+        //         &lt SYS F   &kp  W    &kp D   &kp  L     &kp Q                  &kp  J    &kp U   &kp O    &kp Y &kp  P
+        //         &kp  C     &kp  S    &kp  T    &kp  R    &kp  X                     &kp SQT   &kp  N  &kp A         &kp I     &kp  H
+        //         &hm LCTRL  B     &hm LALT  V    &hm LSHFT G   &kp M    &kp Z             &kp SEMI &kp K  &kp  COMMA   &kp DOT     &kp   RET
+        //                          &lt NAV  E     &hm LGUI    RET          &hm LSHFT SPACE   &lt NUM BKSP
+        //     >;
+        // };
+
+        // default_layer {
+        //     bindings = <
+
+        //         &lt SYS  V  &kp  W    &kp D   &kp  L     &kp Q                  &kp  J    &kp U   &kp O    &kp Y &kp  P
+        //         &kp  C     &kp  S    &kp  T    &kp  H    &kp  X                     &kp SQT   &kp  N  &kp A         &kp I     &kp   R
+        //         &hm LCTRL  B     &hm LALT F     &hm LSHFT G   &kp M    &kp Z             &kp SEMI &kp K  &kp  COMMA   &kp DOT     &kp   RET
+        //                          &lt NAV E      &hm LGUI    RET          &hm LSHFT SPACE   &lt NUM  BKSP
+        //     >;
+        // };
+
+
+        // default_layer {
+        //     bindings = <
+
+        //         &lt SYS B   &kp  W    &kp D   &kp  L     &kp Q                  &kp  J    &kp U   &kp O    &kp Y &kp  P
+        //         &kp R       &kp  S    &kp  T    &kp  H    &kp  X                     &kp SQT   &kp  N  &kp A         &kp I     &kp  G
+        //         &hm LCTRL  V      &hm LALT F     &hm LSHFT C   &kp M    &kp Z             &kp SEMI &kp K  &kp  COMMA   &kp DOT     &kp   RET
+        //                          &lt NAV E      &hm LGUI    RET          &hm LSHFT SPACE   &lt NUM  BKSP
+        //     >;
+        // };
+
         default_layer {
             bindings = <
-                         
-                &lt SYS  B  &kp W       &kp D   &kp  L      &kp Q              &kp  Z   &kp U   &kp O      &kp Y  &kp   P      
-                &kp  C   &kp  S    &kp  T    &kp   H   &kp K                     &kp J    &kp A  &kp E    &kp I   &lt SHCT  N
-                &hm LCTRL   V   &hm LALT  F    &hm LSHFT   G   &kp  M   &kp  X          &kp SQT   &kp  SEMI   &kp COMMA  &kp DOT    &kp   RET      
-                                       &lt NAV  R  &hm LGUI  RET         &hm LSHFT SPACE   &lt NUM BKSP  
+
+                &lt SYS Q   &kp  W    &kp E   &kp  R    &kp T                  &kp  Y    &kp U   &kp I   &kp O &kp  P
+                &kp  A     &kp  S    &kp  D    &kp F    &kp G                     &kp H   &kp J    &kp K   &kp  L  &lt SHCT SEMI
+                &hm LCTRL  Z   &hm LALT X   &hm LSHFT C   &kp V    &kp B             &kp N &kp M  &kp  COMMA   &kp DOT     &kp   RET
+                                 &lt NAV SPACE   &hm LGUI    RET          &hm LSHFT SPACE   &lt NUM  BKSP
+            >;
+        };
+
+        astrg_layer {
+            bindings = <
+
+                &lt SYS Q   &kp  W    &kp D   &kp  L    &kp B                  &kp  J    &kp U   &kp O   &kp Y &kp P
+                &kp  A     &kp  S    &kp  T    &kp  R  &kp G                     &kp H   &kp N    &kp E   &kp  I   &lt SHCT  K
+                &hm LCTRL  Z   &hm LALT V   &hm LSHFT C   &kp F    &kp X             &kp SEMI &kp M  &kp  COMMA   &kp DOT     &kp   RET
+                                 &lt NAV SPACE   &hm LGUI    RET          &hm LSHFT SPACE   &lt NUM  BKSP
+            >;
+        };
+
+        // csthk_layer {
+        //     bindings = <
+
+        //         &lt SYS  F    &kp   W    &kp D   &kp  L      &kp Q                  &kp  J    &kp U   &kp O    &kp Y &kp  P
+        //         &kp  C    &kp  S    &kp  T    &kp   H   &kp   K                      &kp  SQT     &kp  A  &kp E       &kp I     &lt SHCT  N
+        //         &hm LCTRL V    &hm LALT X     &hm LSHFT G  &kp M  &kp Z             &kp SEMI &kp  B    &kp  COMMA  &kp DOT     &kp   RET
+        //                          &lt NAV  R     &hm LGUI    RET          &hm LSHFT SPACE   &lt NUM BKSP
+        //     >;
+        // };
+
+        csthk_layer {
+            bindings = <
+                &lt SYS Q   &kp   W    &kp D   &kp  L   &kp  B                &kp  J    &kp U      &kp O  &kp I    &kp  P
+                &kp G     &kp  S    &kp  T    &kp   H   &kp  K                      &kp  Z    &kp N  &kp E &kp  A      &lt SHCT   SQT
+                &hm LCTRL  V   &hm LALT F     &hm LSHFT C &kp M  &kp X           &kp SEMI &kp   Y   &kp  COMMA  &kp DOT     &kp   RET
+                                 &lt NAV  R     &hm LGUI    RET          &hm LSHFT SPACE   &lt NUM BKSP
             >;
         };
 
         num_layer {
             bindings = <
-                &kp EXCL   &kp AT   &kp HASH   &kp DOLLAR   &kp PERCENT           &kp CARET   &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR  
-                &kp N1   &kp N2   &kp N3   &kp N4   &kp N5                          &kp N6   &kp N7  &kp N8   &kp N9   &kp N0  
-                &kp F1   &kp F2   &kp F3   &kp F5   &kp F12                     &kp LT   &kp GT   &kp TILDE   &kp FSLH   &kp QMARK 
-                        &trans   &trans                     &trans   &trans  
+                &kp EXCL   &kp AT   &kp HASH   &kp DOLLAR   &kp PERCENT           &kp CARET   &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR
+                &kp N1   &kp N2   &kp N3   &kp N4   &kp N5                          &kp N6   &kp N7  &kp N8   &kp N9   &kp N0
+                &kp F1   &kp F2   &kp F3   &kp F5   &kp F12                     &kp LT   &kp GT   &kp TILDE   &kp FSLH   &kp QMARK
+                        &trans   &trans                     &trans   &trans
             >;
         };
 
         nav_layer {
             bindings = <
                 &kp ESC   &kp DEL   &kp UP  &kp BSPC    &jon                &kp PIPE    &kp BSLH  &kp UNDER   &kp PLUS   &kp DQT
-                &kp TAB   &kp LEFT   &kp DOWN   &kp RIGHT   &arrow           &kp LBRC   &kp RBRC   &kp MINUS   &kp EQUAL    &kp SQT  
-                &kp RET   &kp SPACE &sl SHCT   &kp GRAVE   &darrow       &kp LBKT   &kp RBKT   &kp RGUI   &kp RALT   &kp RCTRL
-                        &trans   &trans                     &trans   &trans  
+                &kp TAB   &kp LEFT   &kp DOWN   &kp RIGHT   &arrow           &kp LBRC   &kp RBRC   &kp MINUS   &kp EQUAL    &kp SQT
+                &kp RET   &kp SPACE &trans   &kp GRAVE   &darrow       &kp LBKT   &kp RBKT   &kp RGUI   &kp RALT   &kp RCTRL
+                        &trans   &trans                     &trans   &trans
             >;
         };
 
         system_layer {
             bindings = <
                 &trans   &bt BT_NXT  &bt BT_PRV  &bt BT_CLR   &trans      &trans   &bt BT_CLR  &bt BT_PRV   &bt BT_NXT  &trans
-                 &trans &trans   &trans  &trans   &trans               &trans &trans   &trans  &trans   &trans 
-                 &trans   &trans  &trans   &trans  &trans              &trans &trans   &trans  &trans   &trans 
-                 
-                        &trans   &trans                     &trans   &trans  
+                 &trans &trans   &trans  &trans   &trans               &trans &trans   &trans  &trans   &trans
+                 &trans   &trans  &trans   &trans  &trans              &to QWERT &to ASRT   &to CSTH  &trans   &trans
+
+                        &trans   &trans                     &trans   &trans
             >;
         };
-        
+
         shortcut_layer {
             bindings = <
-             
+
                  &kp ESC    &kp LC(D)   &kp LC(R)   &kp LG(R)   &kp LG(LA(R))                  &trans &trans   &kp UP  &trans   &trans
-                &kp LG(A)  &kp LG(S)       &kp LG(D)         &kp LG(F)   &kp LG(LS(N5))        &trans &kp LEFT   &kp DOWN   &kp RIGHT   &trans 
-                &kp LG(Z) &kp  LG(X)        &kp LG(C)          &kp LG(V)   &kp LG(SPACE)       &trans &trans   &trans  &trans   &trans 
-                 
-                        &trans   &trans                     &trans   &kp RCTRL 
+                &kp LG(A)  &kp LG(S)       &kp LG(D)         &kp LG(F)   &kp LG(LS(N5))        &trans &kp LEFT   &kp DOWN   &kp RIGHT   &trans
+                &kp LG(Z) &kp  LG(X)        &kp LG(C)          &kp LG(V)   &kp LG(SPACE)       &trans &trans   &trans  &trans   &trans
+
+                        &trans   &trans                     &trans   &kp RCTRL
             >;
         };
 
